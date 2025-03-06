@@ -90,6 +90,7 @@ Key Point
   - Objective: Provide a competitive, data-driven price recommendation
 ---
 **7. Analysis Process Flow**
+
 To solve the pricing challenge in Saudi Arabia’s used car market, we’re going to build a Machine Learning (ML) model that predicts car prices based on historical data. Since we’re working with continuous price values, this falls under Regression ML.
 
 **- Understanding the Data**
