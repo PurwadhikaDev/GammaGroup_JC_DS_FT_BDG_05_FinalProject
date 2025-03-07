@@ -153,9 +153,9 @@ The smaller the MAE and MAPE values, the more accurate the model will be in pred
 3. When categorical columns contain too many unique values, or grouping might be necessary.
 4. Change the value of the abnormal data
 
-## **Summary and Recommendation**
+**9. Summary and Recommendation**
 
-### **Summary**
+**Summary**
 
 Based on the developed model, the features used for prediction include vehicle age, engine size, mileage, and specific car brands/types.  
 
@@ -176,6 +176,44 @@ The model still has room for improvement to enhance prediction accuracy. In the 
 
 **Unsuitable Use Cases:**  
 - Predicting prices for cars outside the specified range, such as **limited edition cars, classic/antique cars, or modified vehicles**.
+
+**Recommendation**
+
+**1. For Model**
+- The data refinement process involved removing rows where the 'Price' feature had values of 0 and 1 SAR, as well as applying constraints to 'Price' and 'Mileage' due to anomalies. As a result, the dataset used for model development was significantly reduced to 6,027 rows, representing approximately 25% of the original dataframe. To improve future model performance, increasing the dataset size is recommended, as the current number of observations may be insufficient for optimal prediction accuracy.
+- Incorporating additional features that strongly correlate with the target variable 'Price' could enhance the model. Relevant features may include the car's interior and exterior condition, document completeness (such as registration, license, and owner's manual), maintenance history, and accident history. ([Source: What are the factors that influence a used car price?](https://carsellzone.com/blog/detail/factors-affect-car-price))
+- Adding a feature to distinguish classic cars from regular ones could be beneficial. This is because the relationship between 'Mileage' and 'Price' differs across vehicle types, such as classic cars, supercars, and everyday cars. For instance, a classic car from 1965 might have a higher value than a car from 2005. However, classifying vehicles as classic requires domain expertise to determine which models qualify.
+
+**2. For Syarah.com**
+
+**1. Intelligent Used Car Marketplace**
+
+Develop an AI-powered e-commerce platform for used cars, integrating with the machine learning model.
+
+Key Features:
+
+- Trend analysis based on location and seasonality.
+- Automated bidding system for buyers to get the best price.
+
+Monetization Strategies:
+
+- Premium listing fees.
+
+
+**2. AI-Powered Loan & Insurance Underwriting**
+
+Leverage the machine learning model to help financial and insurance companies assess vehicle asset values.
+
+Key Features:
+
+- Predict depreciation rates for used cars to assess loan risks.
+- Determine collateral value for vehicle-backed loans.
+- AI-based insurance pricing based on car conditions.
+
+Monetization Strategies:
+
+- Partnerships with banks and insurance providers.
+- API-based subscription model for automated vehicle valuation services.
 
 **! You want to see More ???**
 
