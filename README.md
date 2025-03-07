@@ -153,6 +153,8 @@ The smaller the MAE and MAPE values, the more accurate the model will be in pred
 3. When categorical columns contain too many unique values, or grouping might be necessary.
 4. Change the value of the abnormal data
 
+---
+
 **9. Summary and Recommendation**
 
 **Summary**
