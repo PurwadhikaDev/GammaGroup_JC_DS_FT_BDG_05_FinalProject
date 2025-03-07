@@ -152,6 +152,31 @@ The smaller the MAE and MAPE values, the more accurate the model will be in pred
 2. Numerical columns should be examined for outliers or unusual distributions that could impact price predictions.
 3. When categorical columns contain too many unique values, or grouping might be necessary.
 4. Change the value of the abnormal data
+
+## **Summary and Recommendation**
+
+### **Summary**
+
+Based on the developed model, the features used for prediction include vehicle age, engine size, mileage, and specific car brands/types.  
+
+The best-performing model is **CatBoost**, with parameters optimized through hyperparameter tuning.  
+
+Using evaluation metrics such as RMSE, MAE, and MAPE, we observe that the MAPE value after hyperparameter tuning is **17.9%**. This means that when the model is used to estimate the price of new cars within a price range of **SAR 6,500 to SAR 1,150,000**, the average prediction error is approximately **17.9%** from the actual price.  
+
+However, there is also a possibility of significant prediction errors. Based on the visualization of actual vs. predicted prices and residuals, some bias is evident. This could be due to the **limited features in the dataset**, which may not fully represent the car's condition, such as **exterior condition, engine overhauls, interior condition, accident history**, and other factors.  
+
+The model still has room for improvement to enhance prediction accuracy. In the future, we could compare this model’s predictions with the **valuation accuracy of professional appraisers** to refine its performance.  
+
+**Suitable Use Cases:**  
+- Estimating the price of used cars that meet the following conditions:  
+  - **Price range**: SAR 6,500 – 1,150,000  
+  - **Mileage**: Below 300,000 mil  
+  - **Manufacturing Year**: 2011 – 2021  
+  - **Price Type**: Non-negotiable  
+
+**Unsuitable Use Cases:**  
+- Predicting prices for cars outside the specified range, such as **limited edition cars, classic/antique cars, or modified vehicles**.
+
 **! You want to see More ???**
 
 This Github Provide
