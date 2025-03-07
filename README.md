@@ -221,7 +221,7 @@ Monetization Strategies:
 
 This Github Provide
   - To be able to view the analysis file you can access ipynb available on this github, Analysis File in the form of a file IPYNB
-  - Dashboard based on Analysis you could Access by [Click Here](https://public.tableau.com/app/profile/ramadhyan.de.surya/viz/UsedCarDashboard_17410944222040/Dashboard1?publish=yes).
+  - Dashboard based on Analysis you could Access by [Click Here](https://public.tableau.com/app/profile/ramadhyan.de.surya/viz/UsedCarDashboard_17410944222040/ProductDashboard1?publish=yes).
   - Prototype Model Application Deployed in the form of a file Folder Strimlit or see **Note** below
   
 
