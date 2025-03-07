@@ -117,6 +117,41 @@ As for the process of making a model by considering business problems, the evalu
 The smaller the MAE and MAPE values, the more accurate the model will be in predicting car prices based on the limitations of the features used.
 
 ---
+
+## Data Understanding
+  - **Dataset Information**
+
+| **Columns** | **Data Type** | **Description** |
+| --- | --- | --- |
+| Make | Object | Company Name |
+| Type | Object | Type of Car |
+| Year | Integer | Manufacturing year |
+| Origin | Object | Origin of used car |
+| Color  | Object | Color of used car |
+| Options | Object | Options of used car (How many feature in the car) |
+| Engine_Size | Float | The engine size of used car |
+| Fuel Type   | Object | Type fuel being used in used car |
+| Gear Type | Object | Gear type size of used car |
+| Mileage | Integer | Total distance a vehicle has traveled or its fuel efficiency (miles per gallon) |
+| Region | Object | The region in which the used car was offered for sale |
+| Price | Integer | Used car price. (in riyal) | 
+| Negotiable | Booleans | True if the price is 0, that means it is negotiable | 
+   
+  - The dataset contains 8,035 rows and 13 columns, indicating a sufficiently large sample size for analysis and Machine Learning modeling.
+
+  - **Data Types**
+
+1. 8 object-type columns → This represent `Make`, `Type`, `Origin`, `Color`, `Options`, `Fuel_Type`, `Gear_Type`, and `Region`
+2. 3 int64 columns (integer values) → This represent `Year`, `Milleage`, and `Price`.
+3. 1 float64 column (decimal values) → This represent `Engine_Size`.
+4. 1 boolean column → Possibly indicates a binary feature → This represent `Negotiation`. 
+
+**Potential Data Cleaning & Feature Engineering**
+
+1. Need to check for missing values in all columns.
+2. Numerical columns should be examined for outliers or unusual distributions that could impact price predictions.
+3. When categorical columns contain too many unique values, or grouping might be necessary.
+4. Change the value of the abnormal data
 **! You want to see More ???**
 
 This Github Provide
