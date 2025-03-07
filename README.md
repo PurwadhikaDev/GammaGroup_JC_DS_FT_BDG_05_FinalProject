@@ -130,8 +130,8 @@ The smaller the MAE and MAPE values, the more accurate the model will be in pred
 | Color  | Object | Color of used car |
 | Options | Object | Options of used car (How many feature in the car) |
 | Engine_Size | Float | The engine size of used car |
-| Fuel Type   | Object | Type fuel being used in used car |
-| Gear Type | Object | Gear type size of used car |
+| Fuel_Type   | Object | Type fuel being used in used car |
+| Gear_Type | Object | Gear type size of used car |
 | Mileage | Integer | Total distance a vehicle has traveled or its fuel efficiency (miles per gallon) |
 | Region | Object | The region in which the used car was offered for sale |
 | Price | Integer | Used car price. (in riyal) | 
