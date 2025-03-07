@@ -163,7 +163,7 @@ Based on the developed model, the features used for prediction include vehicle a
 
 The best-performing model is **CatBoost**, with parameters optimized through hyperparameter tuning.  
 
-Using evaluation metrics such as RMSE, MAE, and MAPE, we observe that the MAPE value after hyperparameter tuning is **17.9%**. This means that when the model is used to estimate the price of new cars within a price range of **SAR 6,500 to SAR 1,150,000**, the average prediction error is approximately **17.9%** from the actual price.  
+Using evaluation metrics such as RMSE, MAE, MAPE, and R2, we observe that the MAE value after hyperparameter tuning is **13120.29** and MAPE value after hyperparameter tuning is **17.9%**. This means that when the model is used to estimate the price of new cars within a price range of **SAR 6,500 to SAR 1,150,000**, the average prediction error is approximately **17.9%** from the actual price.  
 
 However, there is also a possibility of significant prediction errors. Based on the visualization of actual vs. predicted prices and residuals, some bias is evident. This could be due to the **limited features in the dataset**, which may not fully represent the car's condition, such as **exterior condition, engine overhauls, interior condition, accident history**, and other factors.  
 
