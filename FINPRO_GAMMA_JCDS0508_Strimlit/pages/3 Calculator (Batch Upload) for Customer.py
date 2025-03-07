@@ -39,27 +39,44 @@ if uploaded_file is not None:
         
         data = data[required_columns] if all(col in data.columns for col in required_columns) else data.filter(items=required_columns)
         
+        data.insert(0, 'Car_ID', [f"MB-{str(i+1).zfill(2)}" for i in range(len(data))])
+        
         st.dataframe(data, height=125)
         st.success(f"Dataset processed with required columns. Total rows: {data.shape[0]}")
         
-        if data.shape[0] > 50:
-            st.warning("⚠️ The uploaded file contains more than 50 rows. Only the first 50 rows will be processed.")
-            data = data.iloc[:50]
+        default_selection = data.index[:50].tolist() if data.shape[0] > 50 else data.index.tolist()
         
-        if st.button("Predict the Price"):
-            predictions = model.predict(data)
-            data['Prediction'] = predictions.round().astype(int)
-            
-            st.write("Prediction Result:")
-            st.dataframe(data[['Prediction']])
-            
-            csv = data.to_csv(index=False)
-            st.download_button(
-                label="Download Prediction Result",
-                data=csv,
-                file_name='predictions.csv',
-                mime='text/csv'
-            )
+        # Select specific 50 rows from full dataset
+        selected_rows = st.multiselect(
+            "Select up to 50 rows to predict:", 
+            options=data.index.tolist(), 
+            default=default_selection
+        )
+        
+        # If no selection is made, default to first 50 rows
+        if not selected_rows:
+            st.warning("⚠️ No rows selected. Defaulting to the first 50 rows.")
+            selected_rows = default_selection
+        
+        if len(selected_rows) > 50:
+            st.warning("⚠️ You can only select up to 50 rows.")
+        else:
+            selected_data = data.loc[selected_rows]
+        
+            if st.button("Predict the Price"):
+                predictions = model.predict(selected_data[required_columns])
+                selected_data['Prediction'] = predictions.round().astype(int)
+                
+                st.write("Prediction Result:")
+                st.dataframe(selected_data)
+                
+                csv = selected_data.to_csv(index=False)
+                st.download_button(
+                    label="Download Prediction Result",
+                    data=csv,
+                    file_name='predictions.csv',
+                    mime='text/csv'
+                )
     except Exception as e:
         st.error(f"An error occurred while processing the file: {e}")
 else:
