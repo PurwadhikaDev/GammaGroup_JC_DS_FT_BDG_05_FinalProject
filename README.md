@@ -94,9 +94,9 @@ Key Point
 To solve the pricing challenge in Saudi Arabia’s used car market, we’re going to build a Machine Learning (ML) model that predicts car prices based on historical data. Since we’re working with continuous price values, this falls under Regression ML.
 
 **- Understanding the Data**
-**- Preparing the Data for ML**
-**- Choosing & Training the Model**
-**- Making the Model stabilize**
+**--> Preparing the Data for ML**
+**--> Choosing & Training the Model**
+**--> Making the Model stabilize**
 
 As for the process of making a model by considering business problems, the evaluation metric are
 
